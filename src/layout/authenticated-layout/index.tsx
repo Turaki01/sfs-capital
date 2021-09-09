@@ -8,6 +8,8 @@ import {
   NavigationWrapper,
   MenuItems,
   AppContainer,
+  AllRightReserve,
+  MenuElementsContainer,
 } from "./styles";
 import Logo from "../../assets/svg/logo.svg";
 import { MenuList } from "routes/MenuList";
@@ -16,7 +18,7 @@ import { useHistory } from "react-router";
 function AuthenticatedLayout(props: React.PropsWithChildren<{}>) {
   const history = useHistory();
   const pathName = history.location.pathname;
-  
+
   return (
     <Container>
       <NavigationWrapper>
@@ -26,21 +28,30 @@ function AuthenticatedLayout(props: React.PropsWithChildren<{}>) {
               <img src={Logo} alt="logo" />
             </LogoMenuContainer>
 
-            <MenuItemsDiv>
-              {MenuList.map((item, index) => (
-                <MenuItems
-                  className={
-                    pathName.includes(item.name.toLowerCase())
-                      ? "active-menu"
-                      : ""
-                  }
-                  onClick={() => history.push(item.path)}
-                  key={index}
-                >
-                  {item.name}
-                </MenuItems>
-              ))}
-            </MenuItemsDiv>
+            <MenuElementsContainer>
+              <MenuItemsDiv>
+                {MenuList.map((item, index) => (
+                  <MenuItems
+                    className={
+                      pathName.includes(item.name.toLowerCase())
+                        ? "active-menu"
+                        : ""
+                    }
+                    onClick={() => history.push(item.path)}
+                    key={index}
+                  >
+                    <img
+                      src={item.icon}
+                      style={{ maxWidth: "20px", marginRight: "10px" }}
+                      alt={item.name}
+                    />
+                    {item.name}
+                  </MenuItems>
+                ))}
+              </MenuItemsDiv>
+
+              <AllRightReserve>2019 | Copright - sfs Capital</AllRightReserve>
+            </MenuElementsContainer>
           </div>
         </MenuWrapper>
       </NavigationWrapper>

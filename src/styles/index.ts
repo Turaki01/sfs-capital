@@ -22,6 +22,9 @@ export const device = {
 };
 
 const GlobalStyles = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
 .js-focus-visible :focus:not([data-focus-visible-added]) {
   outline: none;
   box-shadow: none;
@@ -44,6 +47,7 @@ html, body {
   height: 100%;
   font-size: 16px;
   min-height: 100%;
+  font-family: 'Fira Sans', sans-serif;
   background-color: #f3f5fc;
   -webkit-font-smoothing: antialiased;
   outline: none;
