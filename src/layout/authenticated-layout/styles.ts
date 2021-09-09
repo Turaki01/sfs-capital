@@ -9,7 +9,22 @@ const Container = styled.main`
   scrollbar-width: none;
 `;
 
+const HamburgerIcon = styled.div`
+  position: absolute;
+  top: 45px;
+  left: 5%;
+  z-index: 1;
+  cursor: pointer;
+`;
+
 const NavigationWrapper = styled.div`
+  background: ${colors.pri};
+  position: fixed;
+  z-index: 1;
+  height: 100%;
+  overflow-x: hidden;
+  display: none;
+
   @media ${device.laptop} {
     width: 20%;
     display: block;
@@ -76,7 +91,7 @@ const MenuItems = styled.li`
   align-items: center;
 
   &:first-child {
-    color: #fff !important
+    color: #fff !important;
   }
 `;
 
@@ -117,7 +132,7 @@ const LogoutMenu = styled.li`
 const MainWindowWrapper = styled.div`
   width: 100%;
   position: relative;
-  padding-top: 4.5rem;
+  padding-top: 1rem;
 
   @media ${device.laptop} {
     width: 80%;
@@ -125,12 +140,24 @@ const MainWindowWrapper = styled.div`
     height: 100%;
     margin-top: 0;
     margin-left: 20%;
+    padding-top: 0.8rem;
   }
 `;
 
 const AppContainer = styled.div`
   margin: 2rem;
   height: 100vh;
+`;
+
+const CloseIconDiv = styled.div`
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  cursor: pointer;
+
+  @media ${device.laptop} {
+    display: none;
+  }
 `;
 
 export {
@@ -145,5 +172,7 @@ export {
   LogoutMenu,
   ProfileIconDiv,
   AllRightReserve,
-  MenuElementsContainer
+  MenuElementsContainer,
+  HamburgerIcon,
+  CloseIconDiv,
 };

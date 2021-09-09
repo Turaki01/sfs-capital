@@ -81,6 +81,12 @@ const PlanTag = styled.div`
   font-size: 13px;
 `;
 
+const ChartTitle = styled.h3`
+  color: ${colors.pri};
+  text-align: right;
+  margin-bottom: 40px
+`;
+
 export {
   PageTitle,
   LatestInvestmentContainer,
@@ -92,4 +98,5 @@ export {
   InvestmentSubTitle,
   InvestmentCardBody,
   CardBodyTitle,
+  ChartTitle,
 };

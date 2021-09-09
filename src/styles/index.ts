@@ -83,6 +83,10 @@ html, body {
   outline: none;
   width: 16rem
 }
+
+.open-sidebar {
+  display: block !important
+}
 `;
 
 export default GlobalStyles;
