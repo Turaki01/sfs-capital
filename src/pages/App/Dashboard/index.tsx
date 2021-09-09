@@ -15,6 +15,7 @@ import Elipse from "../../../assets/svg/ellipse.svg";
 import NairaIcon from "../../../assets/svg/naira.svg";
 
 import CardComponent from "component/Card";
+import LastestInvestment from "./LatestInvestment";
 
 const Dashboard = () => {
   return (
@@ -51,6 +52,8 @@ const Dashboard = () => {
           <CardImage src={Elipse} alt="Elipse" />
         </CardComponent>
       </DashboardCardContainer>
+
+      <LastestInvestment />
     </div>
   );
 };
