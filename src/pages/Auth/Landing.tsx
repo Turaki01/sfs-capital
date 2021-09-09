@@ -21,6 +21,7 @@ import InvestIcon from "../../assets/svg/Invest.svg";
 import LaterIcon from "../../assets/svg/Later.svg";
 import LeafIcon from "../../assets/svg/leaf.svg";
 import AppHeader from "component/app-header";
+import CalculateInvestments from "./CalculateInvestment";
 
 const Landing = () => {
   const handleLogin = () => {
@@ -49,6 +50,8 @@ const Landing = () => {
           </HeaderElement>
         </>
       </HeaderContainer>
+
+      <CalculateInvestments />
 
       <FinancialServices>
         <FinancialServicesTitle>

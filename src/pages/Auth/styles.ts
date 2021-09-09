@@ -20,6 +20,17 @@ const PrimaryButton = styled.button`
 border-radius: 2px;
 `;
 
+const SuccessButton = styled.button`
+  height: 50px;
+  background: #10C06D;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  padding 0 50px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+border-radius: 2px;
+`;
+
 const LinkButton = styled.button`
 height: 50px;
 color: #fff;
@@ -42,7 +53,7 @@ const HeaderContainer = styled.div`
     background-repeat: no-repeat;
     background-size: 800px;
     height: 80vh;
-    padding: 30px 80px;
+    padding: 30px 80px 0 80px;
   }
 `;
 
@@ -136,4 +147,5 @@ export {
   HeaderElement,
   PrimaryButton,
   LinkButton,
+  SuccessButton
 };

@@ -62,6 +62,27 @@ html, body {
     transition: transform 0.4s;
   }
 }
+
+.custom-select {
+  border: 2px solid #E3E6EA;
+  height: 60px;
+  width: 193px;
+  color: #494b4c;
+  padding: 8px;
+  background: #F5F5F5;
+  outline: none;
+}
+
+.custom-input {
+  border: 2px solid #E3E6EA;
+  height: 36px;
+  width: 193px;
+  color: #494b4c;
+  padding: 10px;
+  background: #F5F5F5;
+  outline: none;
+  width: 16rem
+}
 `;
 
 export default GlobalStyles;
