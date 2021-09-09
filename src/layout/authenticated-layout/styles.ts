@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import colors from "styles/colors";
 import { device } from "../../styles";
 
 const Container = styled.main`
@@ -10,10 +11,10 @@ const Container = styled.main`
 
 const NavigationWrapper = styled.div`
   @media ${device.laptop} {
-    width: 14%;
+    width: 20%;
     display: block;
     position: fixed;
-    background: #ffffff;
+    background: ${colors.pri};
     top: 0;
     left: 0;
     z-index: 1;
@@ -32,16 +33,16 @@ const MenuWrapper = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  padding: 0 3rem;
 `;
 
 const LogoMenuContainer = styled.div`
-  padding: 30px 0px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  margin-bottom: 0px;
+  padding: 25px 16px;
+  margin-bottom: 30px;
+
+  img {
+    width: 60px;
+  }
 `;
 
 const MenuItemsDiv = styled.ul`
@@ -52,13 +53,19 @@ const MenuItemsDiv = styled.ul`
   list-style-type: none;
 `;
 
+const AllRightReserve = styled.p`
+  font-family: "Quicksand", sans-serif;
+  font-size: 12.5px;
+  color: #fff;
+`;
+
 const MenuItems = styled.li`
   border-width: 0px;
   border-style: solid;
   border-color: rgb(226, 232, 240);
   position: relative;
   cursor: pointer;
-  padding: 1rem 1.5rem;
+  padding: 1rem 0;
   margin-bottom: 0.3rem;
   display: flex;
   color: #60636b;
@@ -66,6 +73,18 @@ const MenuItems = styled.li`
   font-weight: 100;
   transition: all 0.1s ease-in 0s;
   text-decoration: none;
+  align-items: center;
+
+  &:first-child {
+    color: #fff !important
+  }
+`;
+
+const MenuElementsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100vh - 160px);
 `;
 
 const ProfileIconDiv = styled.div`
@@ -89,7 +108,7 @@ const LogoutMenu = styled.li`
   margin-bottom: 2rem;
   display: flex;
   color: #60636b;
-  font-size: 1rem;
+  font-size: 15px;
   font-weight: 100;
   transition: all 0.1s ease-in 0s;
   text-decoration: none;
@@ -101,11 +120,11 @@ const MainWindowWrapper = styled.div`
   padding-top: 4.5rem;
 
   @media ${device.laptop} {
-    width: 86%;
+    width: 80%;
     padding: 0;
     height: 100%;
     margin-top: 0;
-    margin-left: 14%;
+    margin-left: 20%;
   }
 `;
 
@@ -125,4 +144,6 @@ export {
   AppContainer,
   LogoutMenu,
   ProfileIconDiv,
+  AllRightReserve,
+  MenuElementsContainer
 };
