@@ -52,6 +52,16 @@ html, body {
   -webkit-font-smoothing: antialiased;
   outline: none;
 }
+
+.card-animated {
+  transform: translateY(0px);
+  transition: transform 0.5s;
+
+  &:hover {
+    transform: translateY(-10px);
+    transition: transform 0.4s;
+  }
+}
 `;
 
 export default GlobalStyles;
