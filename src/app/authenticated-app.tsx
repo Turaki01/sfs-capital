@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import { Route, BrowserRouter as Router, Switch, Redirect } from "react-router-dom";
 import AuthenticatedLayout from "../layout/authenticated-layout";
 import { AppRoutes } from "../routes/Routes.config";
 
@@ -27,6 +27,8 @@ function Routes() {
             key={`dashboard-route-${index}`}
           />
         ))}
+
+        <Redirect from="/" to="/app/dashboard" />
       </Switch>
     </React.Suspense>
   );

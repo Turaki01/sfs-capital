@@ -14,6 +14,7 @@ import {
 import Logo from "../../assets/svg/logo.svg";
 import { MenuList } from "routes/MenuList";
 import { useHistory } from "react-router";
+import AppNav from "component/app-nav";
 
 function AuthenticatedLayout(props: React.PropsWithChildren<{}>) {
   const history = useHistory();
@@ -57,6 +58,7 @@ function AuthenticatedLayout(props: React.PropsWithChildren<{}>) {
       </NavigationWrapper>
 
       <MainWindowWrapper>
+        <AppNav />
         <AppContainer>{props.children}</AppContainer>
       </MainWindowWrapper>
     </Container>
