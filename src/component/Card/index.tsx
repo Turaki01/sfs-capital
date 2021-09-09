@@ -13,11 +13,12 @@ const CardContainer = styled.div`
 interface CardProps {
   children: React.ReactNode;
   height?: string;
-  animationClass?: string
+  animationClass?: string;
+  backgroundColor?: string
 }
 
-const CardComponent: React.FC<CardProps> = ({ children, height, animationClass }) => {
-  return <CardContainer className={animationClass}>{children}</CardContainer>;
+const CardComponent: React.FC<CardProps> = ({ children, height, animationClass, backgroundColor }) => {
+  return <CardContainer className={animationClass} style={{background: backgroundColor}}>{children}</CardContainer>;
 };
 
 export default CardComponent;
