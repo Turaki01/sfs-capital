@@ -8,6 +8,7 @@ const CardContainer = styled.div`
   background: rgb(255, 255, 255);
   margin-bottom: 2rem;
   cursor: pointer;
+  overflow: auto;
 `;
 
 interface CardProps {
