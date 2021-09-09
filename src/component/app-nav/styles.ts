@@ -36,6 +36,7 @@ const NotificationDiv = styled.div`
 const UserIcon = styled.div`
   display: flex;
   align-items: center;
+  justify-content: end;
 
   img {
     max-width: 40px;
@@ -46,6 +47,10 @@ const UserIcon = styled.div`
     font-size: 13px;
     color: ${colors.pri};
     margin-right: 3px
+  }
+
+  @media ${device.laptop} {
+    justify-content: start;
   }
 `;
 

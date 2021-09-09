@@ -10,19 +10,38 @@ import {
   AppContainer,
   AllRightReserve,
   MenuElementsContainer,
+  HamburgerIcon,
+  CloseIconDiv,
 } from "./styles";
 import Logo from "../../assets/svg/logo.svg";
 import { MenuList } from "routes/MenuList";
 import { useHistory } from "react-router";
 import AppNav from "component/app-nav";
+import { RiMenu2Fill, RiCloseCircleFill } from "react-icons/ri";
 
 function AuthenticatedLayout(props: React.PropsWithChildren<{}>) {
   const history = useHistory();
   const pathName = history.location.pathname;
 
+  const [openHamburger, setOpenhamburger] = React.useState(false);
+
   return (
     <Container>
-      <NavigationWrapper>
+      <HamburgerIcon>
+        <RiMenu2Fill
+          onClick={() => setOpenhamburger(true)}
+          style={{ fontSize: "20px" }}
+        />
+      </HamburgerIcon>
+
+      <NavigationWrapper className={`${openHamburger ? "open-sidebar" : ""}`}>
+        <CloseIconDiv>
+          <RiCloseCircleFill
+            onClick={() => setOpenhamburger(false)}
+            style={{ fontSize: "20px", color: "#fff" }}
+          />
+        </CloseIconDiv>
+
         <MenuWrapper>
           <div>
             <LogoMenuContainer>
