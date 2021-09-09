@@ -2,9 +2,9 @@
   "name": "sfs-capital",
   "version": "0.1.0",
   "private": true,
-  "engines":{
-    "node":"14.7.0"
- },
+  "engines": {
+    "node": "14.17.0"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -20,12 +20,14 @@
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "serve-build": "^0.1.0",
     "styled-components": "^5.3.0",
     "typescript": "^4.3.5",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "node server.js",
+    "start":"node src/server.js",
+    "postinstall":"tsc",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
